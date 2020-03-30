@@ -1,0 +1,28 @@
+@import 'variables.css';
+@import 'responsive.css';
+
+/* SCREENS */
+@import 'login.css';
+
+/* CONTROLS */
+@import 'controls/textfield.css';
+@import 'controls/button.css';
+
+*{
+    padding:0;
+    margin:0;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    font-family: 'Arial';
+    font-size: 18px;
+}
+
+#app{
+    background:var(--secondcolor);
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+}

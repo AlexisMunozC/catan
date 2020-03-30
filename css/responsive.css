@@ -1,0 +1,88 @@
+
+    .D-NONE{
+        display:none !important;
+    }
+    .D-FLEX{
+        -webkit-display: flex !important;
+        -moz-display: flex !important;
+        -ms-display: flex !important;
+        -o-display: flex !important;
+        display: flex !important;
+        
+        flex-direction: row;
+    }
+    .R-ROW{
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
+        display: flex;
+        
+        flex-direction: row;
+    }
+    
+    .R-COLUMN{
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
+        display: flex;
+        
+        flex-direction: column;
+    }
+    
+
+
+//FLEX FIT, SPACE CONTENT
+    .R-FIT > *{
+        flex:1;
+    }
+    
+    .R-WRAP{
+        flex-wrap:wrap !important;
+    }
+    
+    .R-NOWRAP{
+        flex-wrap:nowrap !important;
+    }
+
+    .R-ROW.R-ALIGN-X-START, .R-COLUMN.R-ALIGN-Y-START{
+        justify-content:flex-start;
+    }
+    .R-ROW.R-ALIGN-Y-START, .R-COLUMN.R-ALIGN-X-START{
+        align-items:flex-start;
+    }
+    .R-ROW.R-ALIGN-X-CENTER, .R-COLUMN.R-ALIGN-Y-CENTER{
+        justify-content:center;
+    }
+    .R-ROW.R-ALIGN-Y-CENTER, .R-COLUMN.R-ALIGN-X-CENTER{
+        align-items:center;
+    }
+    .R-ROW.R-ALIGN-X-SPACE, .R-COLUMN.R-ALIGN-Y-SPACE{
+        justify-content:space-between;
+    }
+    .R-ROW.R-ALIGN-Y-SPACE, .R-COLUMN.R-ALIGN-X-SPACE{
+        align-items:space-between;
+    }
+    .R-ROW.R-ALIGN-X-AROUND, .R-COLUMN.R-ALIGN-Y-AROUND{
+        justify-content:space-around;
+    }
+    .R-ROW.R-ALIGN-Y-AROUND, .R-COLUMN.R-ALIGN-X-AROUND{
+        align-items:space-around;
+    }
+    .R-ROW.R-ALIGN-X-BOTTOM, .R-COLUMN.R-ALIGN-Y-BOTTOM{
+        justify-content:flex-end;
+    }
+    .R-ROW.R-ALIGN-Y-BOTTOM, .R-COLUMN.R-ALIGN-X-BOTTOM{
+        align-items:flex-end;
+    }
+    .R-ROW.R-ALIGN-X-STRETCH, .R-COLUMN.R-ALIGN-Y-STRETCH{
+        justify-content:stretch;
+    }
+    .R-ROW.R-ALIGN-Y-STRETCH, .R-COLUMN.R-ALIGN-X-STRETCH{
+        align-items:stretch;
+    }
+    .R-ROW.R-ALIGN-Y-BASELINE {
+        -webkit-box-align: baseline;
+        align-items: baseline;
+    }

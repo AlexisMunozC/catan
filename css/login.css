@@ -1,0 +1,25 @@
+
+.login-container{
+    background: transparent;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.login-form{
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    padding: 30px;
+    border: 1px solid var(--darkgray);
+}
+.login-form h1{
+    color: var(--darkgray);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.login-form .button{
+    max-width: 150px;
+}
