@@ -9,4 +9,8 @@ class Game {
             }
         })
     }
+
+    static SetStarted(_start){
+        database.ref('game_started/').set(_start)
+    }
 }
