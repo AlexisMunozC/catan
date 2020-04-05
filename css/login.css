@@ -20,6 +20,9 @@
     font-size: 20px;
     margin-bottom: 20px;
 }
+.login-form .textfield{
+    margin-bottom: 20px;
+}
 .login-form .button{
-    max-width: 150px;
+    max-width: 150px;    
 }

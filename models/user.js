@@ -5,6 +5,7 @@ class User {
 
     static CreateUser(data, successFunction, errorFunction){                
         var key = database.ref().child('users').push().key;
+        data['_is_ready'] = false
         database.ref('users/' + key).set(data, function(error){
             if(error){
                 if(typeof errorFunction === 'function') errorFunction()
@@ -15,14 +16,16 @@ class User {
     }
 
     static UpdateUser(id, data) {
-        database.ref('users/' + id).set(data);
-    }
-
-    static FindUserById(id){
-        database.ref('users/' + id).once('value').then(function(result){
-            return result.val()
+        database.ref("users/" + id).once('value').then(function(result){
+            let userData = result.val()
+            let keys = Object.keys(data)
+            keys.forEach(k => {
+                userData[k] = data[k]
+            })
+            database.ref('users/' + id).set(userData);
         })
     }
+    
 
     static FindUser(data, foundFunction, notFoundFunction){      
         let keys = Object.keys(data)  
@@ -31,14 +34,18 @@ class User {
             if(result.numChildren() == 0){
                 if(typeof notFoundFunction === 'function') notFoundFunction()
             }else{
-                if(typeof foundFunction === 'function') foundFunction()
+                if(typeof foundFunction === 'function') foundFunction(result.val())
             }
         })
     }
 
-    static GetUsers(){   
+    static DeleteUser(id){
+        database.ref('users/'+id).remove()
+    }
+
+    static GetUsers(UpdateFunction){   
         database.ref('users/').on('value', function(result){
-            
+            if(typeof UpdateFunction === 'function') UpdateFunction(result.val())
         })
     }
 }

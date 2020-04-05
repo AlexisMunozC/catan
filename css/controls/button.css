@@ -1,10 +1,9 @@
 .button{    
     border: none;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 10px;
     background: var(--maincolor);
-    color: white;
-    margin: 10px;
+    color: white;    
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0px 0px 1px var(--gray);
@@ -15,12 +14,11 @@
     background: var(--maincolorhover);
 }
 
-.button:first-child{
-    margin-top:0;
-    margin-left: 0;
+
+.button.red{
+    background:var(--red);
 }
 
-.button:last-child{
-    margin-bottom: 0px;
-    margin-left: 0px;
+.button.red:hover{
+    background: var(--lightred);
 }

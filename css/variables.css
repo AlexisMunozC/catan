@@ -1,6 +1,9 @@
 :root {
     --maincolor: #04B45F;
     --maincolorhover: #01DF01;
-    --gray: #F2F2F2;
+    --lightgray: #F2F2F2;
+    --gray: #A4A4A4;
     --darkgray: #424242;
+    --red: #B40404;
+    --lightred: #DF0101;
 }

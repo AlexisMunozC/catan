@@ -3,6 +3,8 @@
 
 /* SCREENS */
 @import 'login.css';
+@import 'users.css';
+@import 'game/game.css';
 
 /* CONTROLS */
 @import 'controls/textfield.css';
@@ -21,7 +23,7 @@
 }
 
 #app{
-    background:var(--secondcolor);
+    background:var(--gray);
     width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
